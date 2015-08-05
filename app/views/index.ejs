@@ -4,8 +4,14 @@
         <tile><%= title %></tile>
     </head>
     <body>
+        <% if(userFullName){ %>
+            <h2>Hello <%= userFullName %></h2>
+            <a href="/signout">Sign out</a>
+        <% } else { %>
+                <a href = "/signup">Signup</a>
+                <a href = "/signin">Signin</a>
+        <% } %>
         <br>
         <img src="img/corvette.jpg" width="900" height="550">
-        <h1><%= title + ' Marcos' %></h1>
     </body>
 </html>
